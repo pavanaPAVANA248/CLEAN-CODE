@@ -1,0 +1,116 @@
+#1 — Meaningful Naming for Variables & Classes
+Make meaningful distinctions
+Choose descriptive and unambiguous names.
+Use pronounceable names.
+Use comments to reveal additional information such as complex business logic, behaviours, assumptions, future suggestions etc.
+Use verbs/verb phrases for functions.
+Pick a single word per concept and use it consistently throughout the source code.
+Prioritize using domain-related terms.
+Avoid dis-information.
+Avoid using implementation details (such as data structure, container type, length) in the variable name.
+Avoid unpopular acronyms and other names that don’t make sense.
+Avoid using comments for introducing variables/functions.
+Avoid using confusing letters for names (e.g. l (simple L), I (capital i), O (capital O)).
+Don’t encode additional details in names.
+Avoid meaningless prefixes or suffixes.
+Related classes and variables should follow a common pattern.
+Follow a common case convention.
+
+
+
+#2 — Functions
+A function should be readable from top to bottom, as a paragraph.
+A set of functions should be readable from top to bottom, as a set of paragraphs.
+Keep functions small — short
+Less number of arguments (≤3) is better.
+A function should remain at a constant level of abstraction
+Avoid duplications (DRY — Don’t Repeat Yourself).
+A function should do only one thing (Keep it atomic). Avoid causing side effects (Do what its name suggests and nothing else).
+Error handling is one thing. Keep functions that do only that.
+Use try/ catch instead of conditions if possible (Asking for forgiveness is easier than requesting permission).
+At lower levels, throw exceptions instead of returning error codes.
+Avoid nested control structures.
+Avoid switchstatements (Hint: use polymorphism and bury the switch statement in an abstract factory).
+It’s better to have many functions than to pass some code into a function to select a behaviour.
+Avoid using boolean variables as function arguments.
+Avoid output arguments (Hint: If returning something is not enough, then your function is probably doing more than one thing).
+A function can be a command or a query, but not both.
+A boolean function must answer yes/no.
+Keep boolean functions in a positive tone.
+
+#3 — Code Organization & Formatting
+Group code by their functionality.
+Declare temporary variables close to their usage.
+Adapt company/team-wide code conventions. Agree on a common standard for code-formatting. 
+Avoid too long files. 1000–2000 lines are okay
+Avoid too-wide code lines. Make sure they fit into the screen 
+Write high-level code first in a file and keep lower-level implementations towards the end of the file. (Good files are like newspaper articles, with a heading, the important stuff first, and details later)
+Make sure the code is ordered as of the calling sequence.
+Follow proper indentation across code files.
+
+
+
+
+#4 — Objects and Data Structures
+A data structure must expose data while having no behavior.
+An object must hide data while exposing the behaviors (via methods).
+Avoid accessing unknown data via method chaining.
+Functions and data structures can have some coupling by nature.
+Functions and classes can have some coupling by nature.
+
+
+
+#5 — Error Handling
+At lower levels, throw exceptions instead of returning error codes.
+Errors and exceptions must provide adequate context (such as intent, failure stage, error type, failed values etc.)
+Map foreign errors to adhere to common standards.
+Reduce the reliance on return type and null checks (since they strongly couple failure path information to main flow).
+
+
+#6 — Boundaries
+Map foreign behaviours into wrapper classes when integrating external systems and third-party code.
+Use the Adapter pattern to handle things that don’t exist (e.g. external systems not yet implemented / integrated). 
+
+
+
+#7 — Classes & Interfaces
+Inside a class/interface, arrange code in order.
+Encapsulate utility methods.
+Make classes small.
+Classes having exactly one responsibility and one reason to change are easy to manage. a.k.a. The Single Responsibility Principle.
+The class name must show its responsibility.
+Multiple small classes are preferred over very few large classes.
+Organize code based on abstractions, not concrete implementation details.
+Maintain high cohesion.
+Too much inheritance is bad. 
+
+
+#8 — Concurrency
+Keep concurrency-related code separate from other code.
+Severely limit access to any data that may be shared.
+Try to maintain data as independent subsets that can be processed by separate threads.
+Avoid using more than one Synchronized method on a shared object.
+Keep synchronized sections as small as possible.
+Think about shut-down early and get it working early.
+
+
+
+
+
+#9 — Comments
+Express yourself in the code, but not in the comments. 
+Warn the consequences of potential scenarios/actions.
+Avoid noise and weak comments 
+Avoid commenting out code chunks.
+
+
+#10 — Application Logging
+Follow a common logging practice across code.
+Use correct log levels and provide the adequate context in log messages 
+Do not log sensitive information
+
+
+
+
+
+
